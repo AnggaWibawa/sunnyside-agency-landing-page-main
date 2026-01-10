@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/sunnyside-agency-landing-page-main/assets/favicon-32x32-DQjEQYWa.png">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-  <link rel="stylesheet" crossorigin href="/sunnyside-agency-landing-page-main/assets/index-D5ZknPOd.css">
+  <script type="module" crossorigin src="/sunnyside-agency-landing-page-main/assets/index-4kyOxlaf.js"></script>
+  <link rel="stylesheet" crossorigin href="/sunnyside-agency-landing-page-main/assets/index-B72mkxSd.css">
 </head>
 
 <body class="bg-white font-body min-h-screen flex flex-col">
@@ -155,16 +156,28 @@
       </div>
     </section>
 
-    <section id="projects" aria-labelledby="" class="grid grid-cols-2 md:grid-cols-4">
-      <h2 class="sr-only"></h2>
-      <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-milkbottles-BlEDpSC3.jpg" alt=""
-        class="w-full h-full object-cover lg:aspect-auto lg:h-[450px]">
-      <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-orange-Ck6VMGA5.jpg" alt=""
-        class="w-full h-full object-cover lg:aspect-auto lg:h-[450px]">
-      <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-cone-B7t2uYBq.jpg" alt=""
-        class="w-full h-full object-cover lg:aspect-auto lg:h-[450px]">
-      <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-sugar-cubes-fb3jnPb7.jpg" alt=""
-        class="w-full h-full object-cover lg:aspect-auto lg:h-[450px]">
+    <section id="projects" aria-labelledby="projects-title" class="grid grid-cols-2 md:grid-cols-4">
+      <h2 id="projects-title" class="sr-only">Gallery of our recent projects</h2>
+
+      <figure>
+        <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-milkbottles-BlEDpSC3.jpg"
+          alt="Milk bottles in front of a sky blue background" class="w-full h-full object-cover lg:h-[450px]">
+      </figure>
+
+      <figure>
+        <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-orange-Ck6VMGA5.jpg" alt="An orange on a plate"
+          class="w-full h-full object-cover lg:h-[450px]">
+      </figure>
+
+      <figure>
+        <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-cone-B7t2uYBq.jpg" alt="An ice cream cone"
+          class="w-full h-full object-cover lg:h-[450px]">
+      </figure>
+
+      <figure>
+        <img src="/sunnyside-agency-landing-page-main/assets/image-gallery-sugar-cubes-fb3jnPb7.jpg" alt="Sugar cubes stacked together"
+          class="w-full h-full object-cover lg:h-[450px]">
+      </figure>
     </section>
   </main>
   <footer id="contact" class="bg-green-500 text-[#2C7566] flex flex-col gap-20 px-6 py-16 lg:px-20">
@@ -233,7 +246,6 @@
         href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-500">Frontend
         Mentor</a>. Coded by <a href="#" target="_blank" class="text-blue-500">AnggaWibawa</a>.</p>
   </footer>
-  <script src="./src/script.js"></script>
 </body>
 
 </html>
