@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-heading: "Fraunces", serif;
+  --font-body: "Barlow", sans-serif;
+
+  /* Colours */
+  --color-red-400: hsl(7, 99%, 70%);
+  --color-yellow-500: hsl(51, 100%, 49%);
+  --color-green-800: hsl(167, 40%, 24%); /* (graphic design text) */
+  --color-blue-800: hsl(198, 62%, 26%); /* (photography text) */
+  --color-green-500: hsl(167, 34%, 70%); /* (footer) */
+  --color-grey-950: hsl(212, 27%, 19%);
+  --color-grey-600: hsl(213, 9%, 39%);
+  --color-grey-550: hsl(232, 10%, 55%);
+  --color-grey-400: hsl(210, 4%, 67%);
+  --color-white: hsl(0, 100%, 100%);
+
+  --clip-menu-triangle: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+@layer components {
+  /* For Mobile Menu */
+  .nav-mobile-popup {
+    @apply opacity-0 pointer-events-none bg-white w-full absolute top-14 flex flex-col gap-6 py-8 pt-14 [clip-path:polygon(0%_24px,_calc(100%-24px)_24px,_100%_0%,_100%_100%,_0%_100%)] transition-opacity duration-200 ease-in-out;
+
+    @media (width >= theme(--breakpoint-md)) {
+      @apply w-fit static opacity-100 pointer-events-auto flex-row gap-10 py-0 bg-transparent [clip-path:none];
+    }
+  }
+
+  /* For About Section */
+  .about-description {
+    @apply flex flex-col justify-center text-center gap-8 px-6 py-16 lg:px-20 lg:text-left xl:px-28;
+  }
+  .about-description-title {
+    @apply text-grey-950 font-heading text-4xl font-bold xl:text-5xl/tight;
+  }
+  .about-description-text {
+    @apply text-grey-550 text-lg/relaxed font-medium xl:text-xl/relaxed;
+  }
+  .about-description-button {
+    @apply text-grey-950 w-fit relative self-center font-heading font-bold tracking-wider leading-[1.4rem] uppercase px-2 after:content-[''] after:w-full after:h-2 after:absolute after:left-0 after:bottom-0 after:rounded-full after:opacity-25 after:-z-10 lg:self-start after:transition-opacity after:duration-200 after:ease-in-out lg:hover:after:opacity-100;
+  }
+
+  /* For Service Section */
+  .service-description {
+    @apply w-full min-h-[202px] absolute left-0 bottom-0 flex flex-col text-center gap-6 px-6 lg:min-h-[180px] lg:px-20 xl:px-48;
+  }
+  .service-description-title {
+    @apply font-heading text-3xl font-bold;
+  }
+  .service-description-text {
+    @apply text-base/relaxed font-medium;
+  }
+
+  /* For Testimonials Section */
+  .testimonial-container {
+    @apply flex flex-col justify-between items-center gap-8;
+  }
+  .testimonial-profile-picture {
+    @apply w-fit h-16 rounded-full object-contain;
+  }
+  .testimonial-text {
+    @apply text-grey-600 text-lg/relaxed font-medium;
+  }
+  .testimonial-cite {
+    @apply flex flex-col gap-2 not-italic;
+  }
+  .testimonial-name {
+    @apply font-heading font-bold;
+  }
+  .testimonial-position {
+    @apply text-grey-400 text-xs font-medium;
+  }
+}
